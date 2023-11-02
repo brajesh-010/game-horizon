@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        background-image: url("bg.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-attachment: fixed;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Add a semi-transparent overlay */
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .login-container {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.9
+        ); /* Semi-transparent white background */
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        width: 300px;
+      }
+      .login-container h1 {
+        font-size: 24px;
+      }
+      .login-container label {
+        font-weight: bold;
+      }
+      .login-container button {
+        width: 100%;
+        margin-top: 15px;
+      }
+      .welcome-container {
+        background-color: rgba(
+          255,
+          255,
+          255,
+          0.9
+        ); /* Semi-transparent white background */
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        display: none;
+        width: 300px;
+      }
+    </style>
+    <title>Game Horizon</title>
+  </head>
+  <body>
+    <div class="container text-center login-container">
+      <h1 class="display-1">Game Horizon</h1>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" class="form-control" id="age" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+
+    <div class="container text-center welcome-container">
+      <h1>Welcome <span id="welcomeName"></span></h1>
+      <p id="welcomeText"></p>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = document.getElementById("name").value;
+          const age = parseInt(document.getElementById("age").value);
+
+          document.getElementById("welcomeName").textContent = name;
+          document.getElementById("welcomeText").textContent =
+            generateWelcomeText(age);
+
+          document.querySelector(".login-container").style.display = "none";
+          document.querySelector(".welcome-container").style.display = "block";
+        });
+
+      function generateWelcomeText(age) {
+        if (age < 18) {
+          return "You are a young gamer. Enjoy your gaming journey!";
+        } else {
+          return "Welcome to our gaming community. Have a great time!";
+        }
+      }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

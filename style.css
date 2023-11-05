@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)) , url('bg.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+}
+
+.navbar{
+    height: 12%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.logo{
+    width: 50px;
+    cursor: pointer;
+}
+
+.menu-icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+nav{
+    flex: 1;
+    text-align: right;
+    margin-right: 40px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 60px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #A087D4;
+    font-size: 15px;
+}
+
+.row{
+    display: flex;
+    height: 65%;
+    align-items: center;
+}
+
+.col{
+    flex-basis: 50%;
+
+}
+
+h1{
+    color: #A087D4;
+    font-size: 100px;
+}
+
+p{
+    color: #A087D4;
+    font-size: 30px;
+    list-style: 15px;
+}
+
+button{
+    width: 180px;
+    color: #000;
+    font-size: 15px;
+    padding: 12px 0;
+    background: #A087D4;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+
+.card{
+    width: 200px;
+    height: 250px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: contain;
+    transition: transform 0.5s;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h3{
+    color: aliceblue;
+    text-shadow: 0 0 5px #999;
+}
+
+.card1{
+    background-image: url("hman.png");
+}
+
+.card2{
+    background-image: url("mem.png");
+}
+
+.card3{
+    background-image: url("scissor.png");
+}

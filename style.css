@@ -76,6 +76,7 @@ p{
 button{
     width: 180px;
     color: #000;
+    cursor: pointer;
     font-size: 15px;
     padding: 12px 0;
     background: #A087D4;

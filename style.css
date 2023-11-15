@@ -96,7 +96,7 @@ button{
     cursor: pointer;
     margin: 10px 15px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     transition: transform 0.5s;
 }
 
